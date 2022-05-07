@@ -10,53 +10,22 @@
 
     <title>Packaging</title>
     <style>
-    #myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
-}
-
-#myUL {
-  /* Remove default list styling */
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
+    
 </style>
   </head>
   <body>
     <h1>Busqueda!</h1>
     
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <input type="text" id="myInput" onkeyup="filterClients()" placeholder="Tipea nombre de cliente">
 
 <ul id="myUL">
-  <li><a href="#">Client1</a></li>
-  <li><a href="#">Client2</a></li>
-  <li><a href="#">Client3</a></li>
-  <li><a href="#">Client4</a></li>
-  <li><a href="#">Client5</a></li>
-  <li><a href="#">Client6</a></li>
-  <li><a href="#">Client7</a></li>
+  <li><a href="#">Adorado</a><span class="badge bg-success">B2B</span></li>
+  <li><a href="#">Biomarket</a><span class="badge bg-success">B2B</span></li>
+  <li><a href="#">Foret</a><span class="badge bg-success">B2C & B2B</span></li>
+  <li><a href="#">CAYENA TIENDA</a><span class="badge bg-success">B2C</span></li>
+  <li><a href="#">Valkiria</a><span class="badge bg-success">B2C</span></li>
+  <li><a href="#">Tsalko</a><span class="badge bg-success">B2B</span></li>
+  <li><a href="#">Lo Simple</a><span class="badge bg-success">B2B</span></li>
 </ul>
 
 
@@ -71,25 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
     <script>
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
 </script>
   </body>
 </html>
