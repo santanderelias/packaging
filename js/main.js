@@ -8,7 +8,7 @@ function toDoc() {
 }
 
 // Declare variables
-var input, filter, ul, li, a, i, txtValue;
+var input, filter, li, a, i, txtValue;
 const input = document.getElementById('myInput');
 const filter = input.value.toUpperCase();
 const li = ul.getElementsByTagName('li');
