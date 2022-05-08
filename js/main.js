@@ -1,4 +1,4 @@
-const lista = document.getElementById("myUL");
+const ul = document.getElementById("myUL");
 const creaitem = document.createElement("li");
 function toDoc() {
   for (var i = 0; i < 1101; i++) {
@@ -9,10 +9,9 @@ function toDoc() {
 
 // Declare variables
 var input, filter, ul, li, a, i, txtValue;
-input = document.getElementById('myInput');
-filter = input.value.toUpperCase();
-ul = document.getElementById("myUL");
-li = ul.getElementsByTagName('li');
+const input = document.getElementById('myInput');
+const filter = input.value.toUpperCase();
+const li = ul.getElementsByTagName('li');
 
 function filterClients() {
     // Loop through all list items, and hide those who don't match the search query
